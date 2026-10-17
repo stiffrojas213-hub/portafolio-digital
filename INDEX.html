@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio académico digital de Stiff Angel Rojas Ruiz">
+  <title>Mi Portafolio | Stiff Angel Rojas Ruiz</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #170b3b;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 28px 7%;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 5% 90%, #b20bba 0%, transparent 42%),
+        radial-gradient(ellipse at 95% 5%, #4239e9 0%, transparent 45%),
+        linear-gradient(135deg, #22065a, #301078 55%, #101a64);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 300px;
+      border: 38px solid #e21bc0;
+      border-radius: 50%;
+      transform: rotate(25deg);
+      top: 110px;
+      left: -230px;
+      opacity: .55;
+      filter: blur(1px);
+      pointer-events: none;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      border: 1px solid #ffffff70;
+      padding: 11px 22px;
+      border-radius: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    nav a { color: #eee4ff; text-decoration: none; font-size: 13px; }
+
+    .login {
+      padding: 12px 23px;
+      border: 1px solid #ffffff80;
+      border-radius: 24px;
+      color: white;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    main { max-width: 1000px; margin: 95px auto 0; }
+
+    .eyebrow {
+      color: #f1a7ff;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.08; }
+    h1 span { color: #f58ce9; }
+
+    .intro {
+      max-width: 560px;
+      color: #e0d6f4;
+      line-height: 1.8;
+      margin: 24px 0;
+    }
+
+    .profile {
+      max-width: 620px;
+      margin-top: 32px;
+      padding: 23px;
+      border: 1px solid #ffffff35;
+      background: #ffffff12;
+      border-radius: 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .profile h2 { margin-bottom: 16px; font-size: 19px; }
+
+    .details {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .detail { color: #d6c7f0; font-size: 12px; }
+    .detail strong { display: block; color: white; font-size: 15px; margin-top: 6px; }
+
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 25px; }
+
+    .button {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 26px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .primary { background: #f02cce; color: white; }
+    .secondary { border: 1px solid #ffffff70; color: white; }
+
+    footer { margin-top: 70px; color: #c8b9e7; font-size: 12px; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 24px 6%; }
+      main { margin-top: 65px; }
+      nav { gap: 13px; }
+      .details { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <header>
+      <div class="logo">SAR · PORTAFOLIO</div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#perfil">Mi perfil</a>
+        <a href="#archivos">Mis archivos</a>
+      </nav>
+      <a class="login" href="#archivos">Mi espacio</a>
+    </header>
+
+    <main id="inicio">
+      <p class="eyebrow">Portafolio académico digital · UPLA</p>
+      <h1>Mi mundo.<br>Mis proyectos.<br><span>Mi futuro.</span></h1>
+      <p class="intro">
+        Un espacio digital para organizar mis documentos, proyectos,
+        trabajos académicos y recursos de aprendizaje en un solo lugar.
+      </p>
+
+      <section class="profile" id="perfil">
+        <h2>Sobre mí</h2>
+        <div class="details">
+          <div class="detail">NOMBRE COMPLETO
+            <strong>Stiff Angel Rojas Ruiz</strong>
+          </div>
+          <div class="detail">UNIVERSIDAD
+            <strong>UPLA</strong>
+          </div>
+          <div class="detail">CARRERA PROFESIONAL
+            <strong>Ingeniería de Sistemas y Computación</strong>
+          </div>
+          <div class="detail">CICLO ACADÉMICO
+            <strong>IV ciclo</strong>
+          </div>
+          <div class="detail">CÓDIGO DE ESTUDIANTE
+            <strong>U03337G</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="actions">
+        <a class="button primary" href="#archivos">Explorar mi portafolio ↗</a>
+        <a class="button secondary" href="#perfil">Conocer mi perfil</a>
+      </div>
+
+      <section id="archivos" class="profile">
+        <h2>Mi espacio de archivos</h2>
+        <p class="intro">
+          Aquí construiremos tu administrador de carpetas, subcarpetas,
+          documentos y vistas previas conectado al almacenamiento en línea.
+        </p>
+        <p class="detail">
+          Próximamente: conexión segura con Google Drive.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 · Portafolio académico de Stiff Angel Rojas Ruiz
+    </footer>
+  </div>
+</body>
+</html>
